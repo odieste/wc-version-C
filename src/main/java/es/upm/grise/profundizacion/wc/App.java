@@ -31,6 +31,14 @@ public class App {
 			return;
 		}
 		
+		// Verify that the commands start with -. It is not necessary
+		// because the first parameter is a command always, but...
+		String commands = args[0];
+		if(commands.charAt(0) != '-') {
+			System.out.println("The commands do not start with -");
+    		return;
+		}
+		
 		return;
 	}
 }
